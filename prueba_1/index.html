@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechBridge ofrece soluciones tecnológicas avanzadas para impulsar tu empresa hacia el futuro.">
+    <meta name="keywords" content="tecnología, desarrollo web, ciberseguridad, consultoría IT">
+    <meta name="author" content="TechBridge Team">
+    <title>TechBridge - Conecta con el Futuro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="hero" role="banner">
+        <div class="hero-content">
+            <h1>TechBridge</h1>
+            <p>Impulsando tu empresa con soluciones tecnológicas</p>
+            <a href="#servicios" class="btn btn-primary">Descubre Más</a>
+        </div>
+    </header>
+
+    <nav class="navbar" role="navigation">
+        <ul>
+            <li><a href="#servicios" class="nav-link">Servicios</a></li>
+            <li><a href="#equipo" class="nav-link">Nuestro Equipo</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+            <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="servicios" class="section">
+            <h2>Servicios</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-code card-icon"></i>
+                    <h3>Desarrollo Web</h3>
+                    <p>Creación de plataformas modernas y responsivas.</p>
+                    <a href="#contacto" class="btn-secondary" onclick="fillMessage('Estoy interesado en el servicio de Desarrollo Web.')">Contratar</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-laptop-code card-icon"></i>
+                    <h3>Consultoría IT</h3>
+                    <p>Optimiza tus recursos tecnológicos con expertos.</p>
+                    <a href="#contacto" class="btn-secondary" onclick="fillMessage('Estoy interesado en el servicio de Consultoría IT.')">Contratar</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt card-icon"></i>
+                    <h3>Ciberseguridad</h3>
+                    <p>Protege tu empresa contra amenazas digitales.</p>
+                    <a href="#contacto" class="btn-secondary" onclick="fillMessage('Estoy interesado en el servicio de Ciberseguridad.')">Contratar</a>
+                </div>
+            </div>
+        </section>
+
+
+<section id="imagenes-enlaces" class="section">
+    <h2>Nuestro Equipo</h2>
+    <div class="grid">
+        <a href="https://www.techbridge.com/desarrollo" target="_blank" class="image-link">
+            <img src="img/img1.jpeg" alt="Desarrollo Web" class="linked-image">
+            <p>Descubre más sobre Desarrollo Web</p>
+            <span class="engineer-name">Ing. Carlos Méndez </span>
+        </a>
+        <a href="https://www.techbridge.com/consultoria" target="_blank" class="image-link">
+            <img src="img/img2.jpeg" alt="Consultoría IT" class="linked-image">
+            <p>Obtén detalles de Consultoría IT</p>
+            <span class="engineer-name">Ing. Ana López</span>
+        </a>
+        <a href="https://www.techbridge.com/ciberseguridad" target="_blank" class="image-link">
+            <img src="img/img3.jpeg" alt="Ciberseguridad" class="linked-image">
+            <p>Protege tu empresa con Ciberseguridad</p>
+            <span class="engineer-name">Ing. willian Ramírez</span>
+        </a>
+    </div>
+</section>
+
+<style>
+    .section {
+        padding: 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .image-link {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .linked-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que la imagen se ajuste sin recortarse */
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .image-link:hover .linked-image {
+        transform: scale(1.05);
+    }
+
+    .engineer-name {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a5e);
+        padding: 5px 10px;
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .image-link:hover .engineer-name {
+        opacity: 1;
+        transform: translate(-50%, -10px);
+    }
+</style>
+
+
+
+
+        <section id="faq" class="section">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item">
+        <button class="accordion">¿Qué servicios ofrece TechBridge?</button>
+        <div class="panel">
+            <p>TechBridge ofrece una gama de servicios para mejorar la infraestructura tecnológica de tu empresa, que incluyen:</p>
+            <ul>
+                <li><strong>Desarrollo Web:</strong> Creamos soluciones web personalizadas que se ajustan a las necesidades de tu negocio.</li>
+                <li><strong>Consultoría IT:</strong> Asesoramos a las empresas en la optimización y digitalización de sus procesos tecnológicos.</li>
+                <li><strong>Ciberseguridad:</strong> Implementamos medidas de seguridad para proteger los datos y la infraestructura digital de tu empresa.</li>
+            </ul>
+            <p>Estamos comprometidos en ofrecer soluciones integrales para mejorar tu competitividad.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="accordion">¿Cómo puedo contactar con ustedes?</button>
+        <div class="panel">
+            <p>Puedes contactarnos a través de múltiples canales:</p>
+            <ul>
+                <li><strong>Formulario en línea:</strong> Llena el formulario de contacto en esta misma página.</li>
+                <li><strong>Teléfono:</strong> Llama a nuestro número de atención al cliente: <a href="tel:+1234567890">+123 456 7890</a>.</li>
+                <li><strong>Correo electrónico:</strong> Envíanos un mensaje a: <a href="mailto:contacto@techbridge.com">contacto@techbridge.com</a>.</li>
+                <li><strong>WhatsApp:</strong> Contacta con nosotros vía <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>.</li>
+            </ul>
+            <p>Estamos disponibles para resolver tus dudas y ofrecerte el apoyo que necesites.</p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <button class="accordion">¿Ofrecen soporte después de implementar los servicios?</button>
+        <div class="panel">
+            <p>Sí, ofrecemos soporte técnico post-implementación para asegurarnos de que todo funcione correctamente. Nuestro soporte incluye:</p>
+            <ul>
+                <li><strong>Asistencia técnica continua:</strong> Resolución de problemas y mantenimiento preventivo.</li>
+                <li><strong>Actualizaciones de software:</strong> Mantenimiento y actualización periódica de los sistemas implementados.</li>
+                <li><strong>Consultoría adicional:</strong> Asesoramiento continuo para optimizar el uso de las soluciones tecnológicas implementadas.</li>
+            </ul>
+            <p>Nos aseguramos de que tu infraestructura tecnológica siga funcionando de manera eficiente.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .section {
+        padding: 20px;
+    }
+
+    .faq-item {
+        margin-bottom: 15px;
+    }
+
+    .accordion {
+        background-color: #007bff;
+        color: white;
+        padding: 15px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .accordion:hover {
+        background-color: #0056b3;
+    }
+
+    .panel {
+        padding: 15px;
+        background-color: #f1f1f1;
+        display: none;
+        overflow: hidden;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .panel p {
+        margin-bottom: 10px;
+    }
+
+    .panel ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    .panel a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .panel a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+
+<section id="testimonios" class="section">
+    <h2>Testimonios</h2>
+    <div class="testimonials-container">
+        <div class="testimonial">
+            <p>"TechBridge transformó nuestra infraestructura tecnológica y ahora nuestra empresa está mucho más preparada para el futuro. ¡Recomendados al 100%!"</p>
+            <h4>- Laura González, CEO de Innovatech</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Gracias a su asesoría, nuestro equipo de IT ahora está mejor capacitado y optimizado. Los resultados fueron excepcionales."</p>
+            <h4>- David Martínez, Director de Tecnología en Nexa</h4>
+        </div>
+    </div>
+</section>
+
+<style>
+    .section {
+        padding: 40px 20px;
+        background-color: #f9f9f9;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .testimonials-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        overflow: hidden;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .testimonial {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 300px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonial:hover {
+        transform: scale(1.05);
+    }
+
+    .testimonial p {
+        font-size: 1.1rem;
+        font-style: italic;
+        color: #666;
+        margin-bottom: 20px;
+        position: relative; /* Necesario para colocar las comillas */
+    }
+
+    .testimonial h4 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    /* Añadir las comillas dentro del testimonio */
+    .testimonial p::before {
+        content: "“";
+        font-size: 3rem;
+        color: #007bff;
+        position: absolute;
+        top: -10px; /* Ajuste vertical */
+        left: -15px; /* Ajuste horizontal */
+        opacity: 0.5;
+    }
+
+    /* Ajustar el texto y las comillas */
+    .testimonial p::after {
+        content: "”";
+        font-size: 3rem;
+        color: #007bff;
+        position: absolute;
+        bottom: -10px; /* Ajuste vertical */
+        right: -15px; /* Ajuste horizontal */
+        opacity: 0.5;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .testimonials-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .testimonial {
+            width: 90%;
+        }
+    }
+</style>
+
+
+       
+       <section id="contacto" class="section">
+    <h2>Contáctanos</h2>
+    <div class="contact-container">
+        <form action="#" method="post" class="contact-form" id="contact-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="quick-contact">
+            <a href="tel:+1234567890" aria-label="Llamar a TechBridge" class="phone-link">
+                <i class="fas fa-phone-alt"></i>Llámanos
+            </a>
+            <a href="mailto:contacto@techbridge.com" aria-label="Enviar un correo a TechBridge" class="email-link">
+                <i class="fas fa-envelope"></i>Escríbenos
+            </a>
+            <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp TechBridge" class="whatsapp-link">
+                <i class="fab fa-whatsapp"></i>WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .section {
+        padding: 20px;
+    }
+
+    .contact-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-form label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .contact-form button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+    }
+
+    .contact-form button:hover {
+        background-color: #0056b3;
+    }
+
+    .quick-contact {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .quick-contact a {
+        font-size: 1rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .quick-contact a i {
+        font-size: 1.2rem;
+    }
+
+    /* Llamada */
+    .phone-link {
+        color: #007bff;
+        background-color: #f1f1f1;
+    }
+
+    .phone-link:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    /* Correo electrónico */
+    .email-link {
+        color: #d44638; /* Color rojo clásico */
+        background-color: #f1f1f1;
+    }
+
+    .email-link:hover {
+        background-color: #d44638;
+        color: #fff;
+    }
+
+    /* WhatsApp */
+    .whatsapp-link {
+        color: #25D366; /* Color verde de WhatsApp */
+        background-color: #f1f1f1;
+    }
+
+    .whatsapp-link:hover {
+        background-color: #25D366;
+        color: #fff;
+    }
+</style>
+
+
+
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2024 TechBridge. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function fillMessage(text) {
+            const mensajeField = document.getElementById('mensaje');
+            mensajeField.value = text;
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("¡Gracias por contactarnos! Te responderemos pronto.");
+            document.getElementById('contact-form').reset();
+        });
+
+        // Script para manejar el acordeón
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                // Alterna la clase "active" para cambiar el estilo del botón
+                this.classList.toggle("active");
+
+                // Obtiene el panel siguiente al botón
+                var panel = this.nextElementSibling;
+
+                // Si el panel está visible, lo ocultamos, si está oculto lo mostramos
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
